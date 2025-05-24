@@ -1,0 +1,25 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%
+% André Heck. Learning PostScript by Doing. AMSTEL Institute, UvA, 2005.
+%
+% Exercice 3
+% difference between rlineto et closepath
+%
+%
+%%BoundingBox: 5 5 105 105
+%%BeginProlog
+%%EndProlog
+newpath
+10 10 moveto
+90 0 rlineto
+0 90 rlineto
+-90 0 rlineto
+
+% difference between rlineto et closepath
+%0 -90 rlineto
+closepath
+
+5 setlinewidth
+stroke
+showpage
+%%EOF
