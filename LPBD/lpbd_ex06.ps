@@ -1,0 +1,69 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%
+% André Heck. Learning PostScript by Doing. AMSTEL Institute, UvA, 2005.
+%
+% Exercice 5
+%
+%
+%%BoundingBox: -2 -2 59 52
+%%BeginProlog
+
+
+% define and assign the scale
+% note: 1 cm = 28.34645 points
+%       1 inch = 72 points
+%
+/s 28.34645 def
+
+%%EndProlog	
+
+% 1st page
+%
+% Equilateral triangle with edges of size 2 cm
+%
+% s s scale
+% 1 s div setlinewidth
+
+% newpath
+% 0 0 moveto
+% 2 0 rlineto
+% -1 3 sqrt rlineto
+% closepath
+
+% stroke
+% showpage
+
+% 2nd page
+%
+
+% light gray, rectangular background of size 5'' × 1''
+%
+/scaleToInch 72 def
+scaleToInch scaleToInch scale
+1 scaleToInch div setlinewidth
+
+1 1 moveto
+5 0 rlineto
+0 1 rlineto
+-5 0 rlineto
+closepath
+0.7 setgray
+
+fill
+
+% red arrow with length 4 inch and arrowhead length 1
+%
+1.5 1 1 3 div add moveto
+3 0 rlineto
+0 1 3 div rlineto
+-3 0 rlineto
+closepath
+1 0 0 setrgbcolor
+fill
+
+showpage
+
+
+
+
+%%EOF
