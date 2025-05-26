@@ -1,0 +1,33 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%
+% André Heck. Learning PostScript by Doing. AMSTEL Institute, UvA, 2005.
+%
+% Exercice 10
+%
+% Introduction to functions
+%
+
+/sum { add } def
+% /sum add def => raise error
+23 45 sum ==
+
+/sqr { dup mul} def
+4 sqr ==
+
+% assign argument to /x 
+% more readable code
+/sqr2 { /x exch def
+	x x mul
+	} def
+4 sqr2 ==
+
+
+% cos with radian input
+/pi 3.1416 def
+/cosine { /rad exch def 
+			180 rad mul pi div cos
+	} def
+
+180 cos ==
+pi cosine ==
+
